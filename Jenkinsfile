@@ -13,9 +13,9 @@ pipeline {
     stage('Build') {
       steps {
         script {
-          dir("webapp") {
+          // dir("webapp") { Borramos esta webapp porque no tiene que netrar en la carpeta web app ya que he configurado mi directorioi en github de otra forma
             dockerImage = docker.build "${env.ARTIFACT_ID}"
-          }
+          // }
         }
       }
     }
